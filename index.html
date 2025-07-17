@@ -40,57 +40,63 @@
     gap: 1rem;
     margin-top: 2rem;
   }
-  .section-button {
-    padding: 1rem;
-    border: 2px solid #6B2C2F;
+  .custom-button {
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 30px;
     background-color: white;
-    color: #6B2C2F;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
+    padding: 10px 20px;
+    margin: 10px 0;
     text-decoration: none;
-    border-radius: 12px;
-    transition: background-color 0.3s, color 0.3s;
+    max-width: 450px;
   }
-  .section-button:hover {
-    background-color: #6B2C2F;
+  .icon-small {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+  }
+  .button-text {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: inherit;
+  }
+  .button-ceremonies {
+    border-color: #bd1f2d;
+    color: #bd1f2d;
+  }
+  .button-ecotourism {
+    border-color: #f4c430;
+    color: #f4c430;
+  }
+  .button-water {
+    border-color: #1e90ff;
+    color: #1e90ff;
+  }
+  .button-future {
+    border-color: #228B22;
+    color: #228B22;
+  }
+  .button-ceremonies:hover {
+    background-color: #bd1f2d;
     color: white;
   }
-    .custom-button {
-  display: flex;
-  align-items: center;
-  border: 2px solid #bd1f2d; /* Burnt red border */
-  border-radius: 30px;
-  background-color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  text-decoration: none;
-  color: #bd1f2d;
-  max-width: 450px;
-}
-
-.icon-small {
-  height: 60px;
-  width: auto;
-  margin-right: 15px;
-}
-
-.button-text {
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-.translation {
-  font-size: 1rem;
-  color: black;
-}
-
-</style>
-
+  .button-ecotourism:hover {
+    background-color: #f4c430;
+    color: white;
+  }
+  .button-water:hover {
+    background-color: #1e90ff;
+    color: white;
+  }
+  .button-future:hover {
+    background-color: #228B22;
+    color: white;
+  }
+  </style>
 </head>
 <body>
   <div class="overview-banner"></div>
-
   <div class="container">
     <h1>Floating Roots<br><span class="translation">ഫ്ലോട്ടിംഗ് റൂട്ട്‌സ്</span></h1>
     <p>
@@ -99,59 +105,69 @@
     <p class="translation">
       പരമ്പരാഗതമായി കൃഷിചെയ്തു വരുന്ന ഉപ്പുവെള്ളം സഹിഷ്ണുതയുള്ള പൊക്കളി അരിയുടെ സാംസ്‌കാരിക, മതപര, രാഷ്ട്രീയ ചരിത്രത്തെ ആധാരമാക്കി നിർമ്മിച്ച ഇന്ററാക്ടീവ് മിക്സഡ് മീഡിയ ശില്പം.
     </p>
-
     <audio controls>
       <source src="audio/floating-roots-description.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-
     <img class="installation-img" src="images/floating-roots-installation.jpg" alt="Floating Roots Installation Image">
-
-     <h2>Team and Acknowledgements<br><span class="translation">ടീംയും നന്ദിയും</span></h2>
-    <h2><u>Team</u></h2><br>
-Ananth Udupa, designer<br>
-Laxmi Renjith, designer and fabrication engineer<br>
-Sophia Woodsbury, designer and fabrication engineer<br> 
-Vishnu C Rajeev, designer and  fabrication engineer<br> 
-Amaljith AM, designer and fabrication engineer<br> 
-R.K. Kalyani, material procurement and fabrication support<br>
-Sibin KS, electronics support<br> 
-Revisankar, design and fabrication support<br> 
-Mufeed Mohamed, material procurement<br> 
-Neha Suresh, fabrication support<br>
-Eric, Volunteer<br> 
-Ethan Giovincent, volunteer<br> 
-Joel Joseph, volunteer<br>
-<br>
-<h2><u>Special Acknowledgements</u></h2><br>
-Tom Thomas, KSUM<br> 
-Jogin Francis, Kerala Fab Lab<br> 
-Dr. Soumya Vinayan, Council for Social Development, Hyderabad<br>
-Dr. Sreelatha U, Rice Research Station Vytilla, Kerala Agricultural University<br>
-Dr. Anson Jose, Inter University Centre for IPR Studies, Cochin University of Science & Technology<br>
-Thomas, Farmer<br> 
-Dr. C G Madhusoodhanan, Equinoct: Community Sourced Modelling Solutions<br>
-Dr. May Meenu Jacob, Agronature<br>
-Dr. Erica Caple James, MIT<br> 
-Dr. Huma Gupta, MIT<br>
-Dr. Caroline Murphy, MIT<br>
-Raafat Mazjhoub, MIT<br>
-Dylan Rollo Roth, MIT<br>
-Deena Darby, MIT<br>
-</p>
-
-    <div class="nav-button custom-button">
-      <a href="ceremonies.html" class="nav-button ceremonies">
-        <img src="ceremonies-icon.png" alt="Ceremonies Icon"> Ceremonies of Pokkaliclass="icon-small"<br><span class="translation">പൊക്കളിയുടെ ചടങ്ങുകൾ</span>
+    <h2><u>Team</u><br><span class="translation">ടീം</span></h2>
+    Ananth Udupa, designer<br>
+    Laxmi Renjith, designer and fabrication engineer<br>
+    Sophia Woodsbury, designer and fabrication engineer<br> 
+    Vishnu C Rajeev, designer and fabrication engineer<br> 
+    Amaljith AM, designer and fabrication engineer<br> 
+    R.K. Kalyani, material procurement and fabrication support<br>
+    Sibin KS, electronics support<br> 
+    Revisankar, design and fabrication support<br> 
+    Mufeed Mohamed, material procurement<br> 
+    Neha Suresh, fabrication support<br>
+    Eric, Volunteer<br> 
+    Ethan Giovincent, volunteer<br> 
+    Joel Joseph, volunteer<br>
+    <br>
+    <h2><u>Special Acknowledgements</u><br><span class="translation">പ്രത്യേക നന്ദികൾ</span></h2>
+    Tom Thomas, KSUM<br> 
+    Jogin Francis, Kerala Fab Lab<br> 
+    Dr. Soumya Vinayan, Council for Social Development, Hyderabad<br>
+    Dr. Sreelatha U, Rice Research Station Vytilla, Kerala Agricultural University<br>
+    Dr. Anson Jose, Inter University Centre for IPR Studies, Cochin University of Science & Technology<br>
+    Thomas, Farmer<br> 
+    Dr. C G Madhusoodhanan, Equinoct: Community Sourced Modelling Solutions<br>
+    Dr. May Meenu Jacob, Agronature<br>
+    Dr. Erica Caple James, MIT<br> 
+    Dr. Huma Gupta, MIT<br>
+    Dr. Caroline Murphy, MIT<br>
+    Raafat Mazjhoub, MIT<br>
+    Dylan Rollo Roth, MIT<br>
+    Deena Darby, MIT<br>
+    <div class="section-buttons">
+      <a href="ceremonies.html" class="custom-button button-ceremonies">
+        <img src="ceremonies-icon.png" alt="Ceremonies Icon" class="icon-small">
+        <div class="button-text">
+          Ceremonies of Pokkali<br>
+          <span class="translation">പൊക്കളിയുടെ ചടങ്ങുകൾ</span>
+        </div>
       </a>
-      <a href="ecotourism.html" class="nav-button ecotourism">
-        <img src="ecotourism-icon.png" alt="Ecotourism Icon"> Ecotourism<br><span class="translation">പരിസ്ഥിതി ടൂറിസം</span>
+      <a href="ecotourism.html" class="custom-button button-ecotourism">
+        <img src="ecotourism-icon.png" alt="Ecotourism Icon" class="icon-small">
+        <div class="button-text">
+          Ecotourism<br>
+          <span class="translation">പരിസ്ഥിതി ടൂറിസം</span>
+        </div>
       </a>
-      <a href="water.html" class="nav-button water">
-        <img src="water-icon.png" alt="Water Icon"> Working with Water<br><span class="translation">വെള്ളവുമായി ചേർന്ന് പ്രവർത്തിക്കൽ</span>
+      <a href="water.html" class="custom-button button-water">
+        <img src="water-icon.png" alt="Water Icon" class="icon-small">
+        <div class="button-text">
+          Working with Water<br>
+          <span class="translation">വെള്ളവുമായി ചേർന്ന് പ്രവർത്തിക്കൽ</span>
+        </div>
       </a>
-      <a href="future.html" class="nav-button future">
-        <img src="future-icon.png" alt="Future Icon"> Building for the Future<br><span class="translation">ഭാവിക്ക് വേണ്ടി നിർമ്മാണം</span>
+      <a href="future.html" class="custom-button button-future">
+        <img src="future-icon.png" alt="Future Icon" class="icon-small">
+        <div class="button-text">
+          Building for the Future<br>
+          <span class="translation">ഭാവിക്ക് വേണ്ടി നിർമ്മാണം</span>
+        </div>
       </a>
     </div>
   </div>
