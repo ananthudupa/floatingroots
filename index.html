@@ -2,174 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Floating Roots | Digital Explainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Floating Roots - Overview</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       background: #fff;
       color: #2b2b2b;
     }
-    header {
-      background-color: #fff;
-      padding: 1rem;
-      text-align: center;
+
+    /* Burnt sienna diamonds (only one row) on white background */
+    .overview-banner {
+      height: 40px;
+      width: 100%;
+      background-color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='10,0 20,10 10,20 0,10' fill='%23E97451'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: 20px 20px;
     }
-    header h1 {
-      font-family: 'Inter', sans-serif;
-      color: #6B2C2F; /* Mahogany color */
-      margin: 0;
-      font-size: 2rem;
-    }
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      background: #fff;
-    }
-    .tab {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1rem;
-      cursor: pointer;
-      flex: 1 0 auto;
-      text-align: center;
-      min-width: 120px;
-      color: #2b2b2b;
-      font-weight: 600;
-      border-bottom: 3px solid transparent;
-    }
-    .tab img {
-      height: 24px;
-      width: 24px;
-    }
-    .tab:hover,
-    .tab.active {
-      border-bottom: 3px solid #6B2C2F;
-      background: #f7f7f7;
-    }
-    .content {
-      display: none;
+
+    .container {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
     }
-    .content.active {
-      display: block;
-    }
-    h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
+
+    h1, h2, h3 {
       color: #6B2C2F;
     }
-    h3 {
-      color: #6B2C2F;
-      margin-top: 2rem;
+
+    .button-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 3rem;
     }
-    img.content-img {
-      max-width: 100%;
+
+    .nav-button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      text-decoration: none;
+      color: white;
       border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-weight: 600;
+      font-size: 1.1rem;
     }
-    audio {
+
+    .ceremonies { background-color: #B22222; }
+    .ecotourism { background-color: #FFD700; color: #2b2b2b; }
+    .water { background-color: #1E90FF; }
+    .future { background-color: #228B22; }
+
+    .nav-button img {
+      width: 40px;
+      height: auto;
+    }
+
+    .installation-img {
       width: 100%;
-      margin: 1rem 0;
+      max-width: 100%;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    @media (max-width: 600px) {
-      .tabs {
-        flex-direction: column;
-      }
+
+    .translation {
+      font-style: italic;
+      color: #555;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="overview-banner"></div>
+
+  <div class="container">
     <h1>Floating Roots</h1>
-  </header>
+    <p>
+      An interactive mixed-media sculpture exploring the cultural, religious, and political history of Pokkali rice paddy farming—a traditionally farmed, salt and flood resilient rice.
+    </p>
+    <p class="translation">
+      പരമ്പരാഗതമായി കൃഷിചെയ്തു വരുന്ന ഉപ്പുവെള്ളം സഹിഷ്ണുതയുള്ള പൊക്കളി അരിയുടെ സാംസ്‌കാരിക, മതപര, രാഷ്ട്രീയ ചരിത്രത്തെ ആധാരമാക്കി നിർമ്മിച്ച ഇന്ററാക്ടീവ് മിക്സഡ് മീഡിയ ശില്പം.
+    </p>
 
-  <div class="tabs">
-    <div class="tab active" onclick="showTab(0)">
-      <img src="icons/overview.png" alt="Overview Icon" /> Overview
-    </div>
-    <div class="tab" onclick="showTab(1)">
-      <img src="icons/ceremonies.png" alt="Ceremonies Icon" /> Ceremonies
-    </div>
-    <div class="tab" onclick="showTab(2)">
-      <img src="icons/ecotourism.png" alt="Ecotourism Icon" /> Ecotourism
-    </div>
-    <div class="tab" onclick="showTab(3)">
-      <img src="icons/water.png" alt="Water Icon" /> Water
-    </div>
-    <div class="tab" onclick="showTab(4)">
-      <img src="icons/future.png" alt="Future Icon" /> Future
-    </div>
-  </div>
-
-  <div class="content active">
-    <h2>Floating Roots</h2>
-    <p>This interactive installation explores the cultural, ecological, and spiritual histories of Pokkali rice farming in Kerala. It draws on oral history, sensory interaction, and the interwoven layers of land and labor.</p>
     <audio controls>
       <source src="audio/floating-roots-description.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <img class="content-img" src="images/floating-roots.jpg" alt="Floating Roots Installation Image"/>
-    <h3>Team and Acknowledgements</h3>
-    <p>Created by [Your Name], with contributions from [Collaborators]. Made possible with support from [Institutions or Funders]. Special thanks to the farmers, craftspeople, and community historians of Kerala.</p>
-  </div>
 
-  <div class="content">
-    <h2>Ceremonies of Pokkali</h2>
-    <p>Through sacred rituals, seasonal transitions, and generational memory, Pokkali farming is as much a ceremony as it is a cultivation method.</p>
-    <h3>Mechanism Description</h3>
-    <img class="content-img" src="images/ceremonies.jpg" alt="Ceremony Mechanism Image"/>
-    <p>This section illustrates how seasonal ceremonies are embedded into farming cycles, with tools and practices that adapt to tides and time.</p>
-  </div>
+    <img class="installation-img" src="images/floating-roots-installation.jpg" alt="Floating Roots Installation Image">
 
-  <div class="content">
-    <h2>Ecotourism</h2>
-    <p>Pokkali fields are increasingly being positioned within eco-tourism landscapes. But what stories are prioritized? What’s erased?</p>
-    <h3>Mechanism Description</h3>
-    <img class="content-img" src="images/ecotourism.jpg" alt="Ecotourism Mechanism Image"/>
-    <p>This segment dissects the infrastructural mechanisms behind "eco" branding — from water taxis to floating pathways — and their ecological impacts.</p>
-  </div>
+    <h2>Team and Acknowledgements</h2>
+    <p>Developed by [Your Team Name]. Special thanks to our collaborators and the local Pokkali farming community.</p>
+    <p class="translation">[നിങ്ങളുടെ ടീമിന്റെ പേര്] വികസിപ്പിച്ചു. സഹപ്രവർത്തകർക്കും പൊക്കളി കർഷകരുടെയും സമൂഹത്തിനും പ്രത്യേകം നന്ദി.</p>
 
-  <div class="content">
-    <h2>Working with Water</h2>
-    <p>Pokkali farmers don't fight floods — they work with them. This tab explores the adaptive tools and cyclical technologies behind water-based farming.</p>
-    <h3>Mechanism Description</h3>
-    <img class="content-img" src="images/waterwork.jpg" alt="Water Work Mechanism Image"/>
-    <p>Mechanisms like tidal gates and floating bunds are explained with illustrations of how they allow saltwater-flooded fields to regenerate naturally.</p>
+    <div class="button-section">
+      <a href="ceremonies.html" class="nav-button ceremonies">
+        <img src="images/ceremonies-icon.png" alt="Ceremonies Icon"> Ceremonies of Pokkali
+      </a>
+      <a href="ecotourism.html" class="nav-button ecotourism">
+        <img src="images/ecotourism-icon.png" alt="Ecotourism Icon"> Ecotourism
+      </a>
+      <a href="water.html" class="nav-button water">
+        <img src="images/water-icon.png" alt="Water Icon"> Working with Water
+      </a>
+      <a href="future.html" class="nav-button future">
+        <img src="images/future-icon.png" alt="Future Icon"> Building for the Future
+      </a>
+    </div>
   </div>
-
-  <div class="content">
-    <h2>Building for the Future</h2>
-    <p>This section invites speculation on how traditional knowledge systems like Pokkali farming can shape climate-resilient futures.</p>
-    <h3>Mechanism Description</h3>
-    <img class="content-img" src="images/future.jpg" alt="Future Mechanism Image"/>
-    <p>Showcases speculative designs and co-created tools for youth-led climate adaptation — bridging tradition and invention.</p>
-  </div>
-
-  <script>
-    function showTab(index) {
-      const contents = document.querySelectorAll('.content');
-      const tabs = document.querySelectorAll('.tab');
-      contents.forEach((c, i) => {
-        c.classList.toggle('active', i === index);
-      });
-      tabs.forEach((t, i) => {
-        t.classList.toggle('active', i === index);
-      });
-    }
-  </script>
 </body>
 </html>
