@@ -114,23 +114,24 @@
       ഈ ഓഡിയോ കേട്ട് ഇൻസ്റ്റാളേഷൻ കുറിച്ച് കൂടുതൽ അറിയൂ.
     </p>
     <br>
-    <p style="font-size: 1.3rem; line-height: 1.6;">
-        English
-    </p>
-    <audio controls>
-      <source src="audio/floating-roots-description.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <img class="installation-img" src="images/floating-roots-installation.jpg" alt="Floating Roots Installation Image">
-  </p>
-    <br>
-    <p style="font-size: 1.3rem; line-height: 1.6;">
-        Malayalam
-    </p>
-    <audio controls>
-      <source src="floating-roots-description.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <div class="language-audio-toggle">
+  <button onclick="toggleAudio('english')" id="btn-en" class="active-lang">English</button>
+  <button onclick="toggleAudio('malayalam')" id="btn-ml">മലയാളം</button>
+</div>
+
+<div id="audio-english" class="audio-block">
+  <audio controls>
+    <source src="audio/floating-roots-description.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<div id="audio-malayalam" class="audio-block hidden">
+  <audio controls>
+    <source src="audio/floating-roots-description-ml.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
     
     <div class="section-buttons">
       <a href="water.html" class="custom-button button-water">
