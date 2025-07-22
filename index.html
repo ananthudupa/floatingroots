@@ -101,10 +101,11 @@
 
 .language-audio-toggle button {
   padding: 8px 16px;
+  margin-right: 8px;
   font-size: 1rem;
-  border: 1px solid #6B2C2F;
+  border: 1px solid #6B202C;
   background-color: white;
-  color: #6B2C2F;
+  color: #6B202C;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -146,7 +147,8 @@
     <br>
     <div class="language-audio-toggle">
   <button onclick="toggleAudio('english')" id="btn-en" class="active-lang">English</button>
-  <button onclick="toggleAudio('malayalam')" id="btn-ml">മലയാളം</button>
+<button onclick="toggleAudio('malayalam')" id="btn-ml">മലയാളം</button>
+
 </div>
 
 <div id="audio-english" class="audio-block">
@@ -241,21 +243,25 @@
 </body>
   <script>
   function toggleAudio(lang) {
-    const enBtn = document.getElementById('btn-en');
-    const mlBtn = document.getElementById('btn-ml');
-    const enAudio = document.getElementById('audio-english');
-    const mlAudio = document.getElementById('audio-malayalam');
+  const audioEnglish = document.getElementById("audio-english");
+  const audioMalayalam = document.getElementById("audio-malayalam");
+  const btnEn = document.getElementById("btn-en");
+  const btnMl = document.getElementById("btn-ml");
 
-    if (lang === 'english') {
-      enAudio.classList.remove('hidden');
-      mlAudio.classList.add('hidden');
-      enBtn.classList.add('active-lang');
-      mlBtn.classList.remove('active-lang');
-    } else {
-      enAudio.classList.add('hidden');
-      mlAudio.classList.remove('hidden');
-      enBtn.classList.remove('active-lang');
-      mlBtn.classList.add('active-lang');
-    }
+  if (lang === "english") {
+    audioEnglish.classList.remove("hidden");
+    audioMalayalam.classList.add("hidden");
+    btnEn.classList.add("active-lang");
+    btnMl.classList.remove("active-lang");
+  } else {
+    audioEnglish.classList.add("hidden");
+    audioMalayalam.classList.remove("hidden");
+    btnEn.classList.remove("active-lang");
+    btnMl.classList.add("active-lang");
+  }
+    .hidden {
+  display: none;
+}
+}
   }
 </html>
