@@ -123,27 +123,8 @@
 }
   </style>
 </head>
-
-  <script>
-  function toggleAudio(lang) {
-    const enBtn = document.getElementById('btn-en');
-    const mlBtn = document.getElementById('btn-ml');
-    const enAudio = document.getElementById('audio-english');
-    const mlAudio = document.getElementById('audio-malayalam');
-
-    if (lang === 'english') {
-      enAudio.classList.remove('hidden');
-      mlAudio.classList.add('hidden');
-      enBtn.classList.add('active-lang');
-      mlBtn.classList.remove('active-lang');
-    } else {
-      enAudio.classList.add('hidden');
-      mlAudio.classList.remove('hidden');
-      enBtn.classList.remove('active-lang');
-      mlBtn.classList.add('active-lang');
-    }
-  }
 </script>
+  
 <body>
   <div class="overview-banner"></div>
   <div class="container">
@@ -258,4 +239,23 @@
     </div>
   </div>
 </body>
+  <script>
+  function toggleAudio(lang) {
+    const enBtn = document.getElementById('btn-en');
+    const mlBtn = document.getElementById('btn-ml');
+    const enAudio = document.getElementById('audio-english');
+    const mlAudio = document.getElementById('audio-malayalam');
+
+    if (lang === 'english') {
+      enAudio.classList.remove('hidden');
+      mlAudio.classList.add('hidden');
+      enBtn.classList.add('active-lang');
+      mlBtn.classList.remove('active-lang');
+    } else {
+      enAudio.classList.add('hidden');
+      mlAudio.classList.remove('hidden');
+      enBtn.classList.remove('active-lang');
+      mlBtn.classList.add('active-lang');
+    }
+  }
 </html>
