@@ -93,8 +93,57 @@
     background-color: #228B22;
     color: white;
   }
+    .language-audio-toggle {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.language-audio-toggle button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 1px solid #6B2C2F;
+  background-color: white;
+  color: #6B2C2F;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.language-audio-toggle .active-lang {
+  background-color: #6B2C2F;
+  color: white;
+}
+
+.audio-block {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
   </style>
 </head>
+
+  <script>
+  function toggleAudio(lang) {
+    const enBtn = document.getElementById('btn-en');
+    const mlBtn = document.getElementById('btn-ml');
+    const enAudio = document.getElementById('audio-english');
+    const mlAudio = document.getElementById('audio-malayalam');
+
+    if (lang === 'english') {
+      enAudio.classList.remove('hidden');
+      mlAudio.classList.add('hidden');
+      enBtn.classList.add('active-lang');
+      mlBtn.classList.remove('active-lang');
+    } else {
+      enAudio.classList.add('hidden');
+      mlAudio.classList.remove('hidden');
+      enBtn.classList.remove('active-lang');
+      mlBtn.classList.add('active-lang');
+    }
+  }
+</script>
 <body>
   <div class="overview-banner"></div>
   <div class="container">
